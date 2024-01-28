@@ -1,0 +1,9 @@
+.gif-item {
+  .title {
+    display: none;
+
+    &:hover {
+      display: block;
+    }
+  }
+}
