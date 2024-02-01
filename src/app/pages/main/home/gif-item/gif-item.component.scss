@@ -1,9 +1,15 @@
 .gif-item {
-  .title {
-    display: none;
+  overflow: hidden;
 
-    &:hover {
-      display: block;
+  .title {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+  }
+
+  &:hover {
+    .title {
+      max-height: 100px; /* Adjust the value according to your content height */
     }
   }
 }

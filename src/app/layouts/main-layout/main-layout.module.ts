@@ -6,6 +6,7 @@ import { SearchFieldComponent } from 'src/app/pages/main/home/search-field/searc
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { HomeComponent } from 'src/app/pages/main/home/home.component';
 import { GifItemComponent } from 'src/app/pages/main/home/gif-item/gif-item.component';
+import { GifDetailComponent } from 'src/app/pages/main/home/dialog/gif-detail/gif-detail.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { GifItemComponent } from 'src/app/pages/main/home/gif-item/gif-item.comp
     HomeComponent,
     SearchFieldComponent,
     GifItemComponent,
+    GifDetailComponent
   ],
   imports: [
     CommonModule,

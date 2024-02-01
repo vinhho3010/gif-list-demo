@@ -18,19 +18,19 @@
           [formControl]="searchKey"
           class="peer h-full w-full outline-none text-sm text-gray-700 pr-2" type="text" id="search"
           placeholder="Search something.." />
-        <button class="bg-blue-600 text-gray-200 px-5 md:py-3 py-1 rounded shadow ring-1 ">Search</button>
       </div>
     </div>
   </div>
 </div>
 <div class="">
-  <div class="">
-    Trending
+  <div class="my-5 pb-2">
+    <span class="md:ml-3 md:text-3xl text-xl font-semibold">Trending</span>
   </div>
-  <div *ngIf="gifs.length > 0" class="gif-list">
-    <div class="flex flex-wrap gap-3">
+  <div *ngIf="gifs.length > 0">
+    <div class="gif-list gap-3">
       <ng-container *ngFor="let gif of gifs">
         <app-gif-item
+        class="h-min"
         [gif]="gif"
         ></app-gif-item>
       </ng-container>

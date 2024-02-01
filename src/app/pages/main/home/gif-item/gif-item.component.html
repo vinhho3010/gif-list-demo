@@ -1,6 +1,18 @@
-<div class="gif-item">
-  <img [src]="gif.images.fixed_height.url">
-  <div class="title">
-    <p>{{gif.title}}</p>
+<div class="gif-item relative rounded-lg overflow-hidden cursor-pointer h-min"
+[class]="getGifClass(gif.images.original)"
+(click)="onDetail(gif)">
+  <img class="w-full h-full object-cover" [src]="gif.images.original.url">
+  <div class="title z-10 bg-black bg-opacity-35 h-1/5 w-full absolute bottom-0 overflow-hidden overflow-ellipsis">
+    <!-- <p class="text-white">{{gif.title}}</p> -->
+    <div class="h-full flex justify-start items-center gap-2 text-white md:text-lg text-base md:px-3 px-1">
+      <ng-container *ngIf="gif.user; else emptyUser" >
+        <img class="w-8 h-8" [src]="gif.user.avatar_url || null" alt="" srcset="">
+        <span>{{gif.user.username}}</span>
+      </ng-container>
+
+      <ng-template #emptyUser >
+        <span class="mx-auto">{{gif.title}}</span>
+      </ng-template>
+    </div>
   </div>
 </div>
