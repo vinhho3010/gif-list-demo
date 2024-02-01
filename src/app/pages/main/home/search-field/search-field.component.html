@@ -24,7 +24,7 @@
 </div>
 <div class="">
   <div class="my-5 pb-2">
-    <span class="md:ml-3 md:text-3xl text-xl font-semibold">Trending</span>
+    <span class="md:ml-3 ml-2 md:text-3xl text-xl font-semibold">{{searchKey.value ? 'Result': 'Trending'}}</span>
   </div>
   <div *ngIf="gifs.length > 0">
     <div class="gif-list gap-3">

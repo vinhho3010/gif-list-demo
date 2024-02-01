@@ -25,20 +25,4 @@ onDetail(gif: GifData) {
   this.dialog.open(GifDetailComponent, dialogData);
 }
 
-getGifClass(gifInfo: ImageData | Mp4Data) {
-  const gifClass = [];
-  if( gifInfo.width as number > 250 ) {
-    gifClass.push('cols-start-2');
-  } else {
-    gifClass.push('cols-start-1');
-  }
-
-  if(gifInfo.height as  number > 250 ) {
-    gifClass.push('rows-start-2');
-  } else {
-    gifClass.push('rows-start-1');
-  }
-
-  return gifClass;
-}
 }

@@ -5,6 +5,7 @@ import { GifData } from 'src/app/models/gif_data.model';
 import { ResponseSearch } from 'src/app/models/response_search.model';
 import { Pagination } from 'src/app/models/pagination.model';
 import { FormControl } from '@angular/forms';
+import { ToastService } from 'src/app/services/toast.service';
 
 @Component({
   selector: 'app-search-field',
@@ -17,12 +18,13 @@ export class SearchFieldComponent implements OnInit {
   searchKey: FormControl = new FormControl('');
   pagination: Pagination = {
     total_count: 0,
-    count: 9,
+    count: 30,
     offset: 0,
   }
 
   constructor(
     private gifService: GifService,
+    private toastService: ToastService
   ) { }
 
   ngOnInit(): void {
@@ -36,10 +38,9 @@ export class SearchFieldComponent implements OnInit {
       next: (response: ResponseSearch<GifData>) => {
         this.gifs = this.gifs.concat(response.data);
         this.pagination.total_count = response.pagination.total_count;
-
       },
       error: (error) => {
-        console.log(error);
+        this.toastService.showErrorToast('Error loading gifs');
       }
     });
   }
@@ -53,7 +54,7 @@ export class SearchFieldComponent implements OnInit {
           this.pagination.total_count = response.pagination.total_count;
         },
         error: (error) => {
-          console.log(error);
+          this.toastService.showErrorToast('Error loading more gifs');
         }
       });
     } else {
@@ -72,7 +73,7 @@ export class SearchFieldComponent implements OnInit {
         this.searchGifs(value, this.pagination);
       },
       error: (error) => {
-        console.log(error);
+        this.toastService.showErrorToast('Error searching gifs');
       }
     })
   }
@@ -85,7 +86,7 @@ export class SearchFieldComponent implements OnInit {
           this.pagination.total_count = response.pagination.total_count;
         },
         error: (error) => {
-          console.log(error);
+          this.toastService.showErrorToast('Error searching gifs');
         }
       });
     } else {

@@ -12,9 +12,17 @@
 }
 
 .gif-list{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  grid-template-rows: repeat(auto-fit, 260px);
-  grid-auto-flow: row dense;
-  gap: 14px;
+  // display: grid;
+  // grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  // grid-template-rows: repeat(auto-fit, 260px);
+
+  // grid-auto-flow: dense;
+  // gap: 14px;
+}
+
+.gif-list {
+  column-width:calc(100px + 10vw);
+  padding-left:2.5%;
+  margin: 8px;
+
 }

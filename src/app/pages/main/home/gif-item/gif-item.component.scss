@@ -13,3 +13,21 @@
     }
   }
 }
+
+
+
+.span-cols-1 {
+  grid-column-end: span 1;
+}
+.span-cols-2 {
+  grid-column-end: span 2;
+}
+
+.span-rows-1 {
+  grid-row-end: span 1;
+}
+
+.span-rows-2 {
+  grid-row-end: span 2;
+}
+

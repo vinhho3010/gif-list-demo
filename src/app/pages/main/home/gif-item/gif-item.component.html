@@ -1,7 +1,6 @@
-<div class="gif-item relative rounded-lg overflow-hidden cursor-pointer h-min"
-[class]="getGifClass(gif.images.original)"
+<div class="gif-item relative rounded-lg overflow-hidden cursor-pointer h-min my-1"
 (click)="onDetail(gif)">
-  <img class="w-full h-full object-cover" [src]="gif.images.original.url">
+  <img class="w-full h-full object-cover" [src]="gif.images.fixed_width.url">
   <div class="title z-10 bg-black bg-opacity-35 h-1/5 w-full absolute bottom-0 overflow-hidden overflow-ellipsis">
     <!-- <p class="text-white">{{gif.title}}</p> -->
     <div class="h-full flex justify-start items-center gap-2 text-white md:text-lg text-base md:px-3 px-1">
