@@ -2,10 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-@import './assets/custom-styles.scss';
+@import "./assets/custom-styles.scss";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 .custom-dialog {
   border-radius: 24px;

@@ -9,25 +9,8 @@
 
   &:hover {
     .title {
-      max-height: 100px; /* Adjust the value according to your content height */
+      max-height: 100px;
+      padding: 8px 0;
     }
   }
 }
-
-
-
-.span-cols-1 {
-  grid-column-end: span 1;
-}
-.span-cols-2 {
-  grid-column-end: span 2;
-}
-
-.span-rows-1 {
-  grid-row-end: span 1;
-}
-
-.span-rows-2 {
-  grid-row-end: span 2;
-}
-
