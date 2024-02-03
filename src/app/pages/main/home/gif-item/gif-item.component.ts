@@ -11,6 +11,7 @@ import { GifDetailComponent } from '../dialog/gif-detail/gif-detail.component';
 })
 export class GifItemComponent {
 @Input() gif!: GifData;
+@Input() showDetail = true;
 
 constructor(
   private dialog: MatDialog
@@ -26,7 +27,9 @@ onDetail(gif: GifData) {
       gif
     },
   }
-  this.dialog.open(GifDetailComponent, dialogData);
+  if(this.showDetail) {
+    this.dialog.open(GifDetailComponent, dialogData);
+  }
 }
 
 }

@@ -38,4 +38,8 @@ export class GifDetailComponent implements OnInit{
       });
     }
   }
+
+  identify(index: number, item: GifData) {
+    return item.id;
+  }
 }

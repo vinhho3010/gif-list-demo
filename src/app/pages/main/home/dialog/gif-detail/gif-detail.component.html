@@ -21,6 +21,14 @@
           <p class="md:text-xl text-lg font-medium mb-0">Title: {{gif?.title}}</p>
           <p class="md:text-xl text-lg font-medium mb-0 ">Rating: <span class="uppercase">{{gif?.rating}}</span></p>
         </div>
+        <div class="mt-3" *ngIf="relatedGifs.length > 0">
+          <span class="font-medium text-lg">Related Gifs</span>
+          <div class="columns-3">
+            <ng-container *ngFor="let gif of relatedGifs; trackBy:identify">
+              <app-gif-item [gif]="gif" [showDetail]="false" class="h-min"></app-gif-item>
+            </ng-container>
+          </div>
+        </div>
       </div>
     </div>
   </div>
