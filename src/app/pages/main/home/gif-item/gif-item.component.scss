@@ -4,13 +4,12 @@
   .title {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
+    transition: max-height .5s ease-in-out;
   }
 
   &:hover {
     .title {
       max-height: 100px;
-      padding: 8px 0;
     }
   }
 }

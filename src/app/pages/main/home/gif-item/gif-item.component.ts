@@ -16,6 +16,10 @@ constructor(
   private dialog: MatDialog
 ) { }
 
+/**
+ * Opens a dialog with the gif detail
+ * @param gif GifData
+ */
 onDetail(gif: GifData) {
   const dialogData = {
     data: {

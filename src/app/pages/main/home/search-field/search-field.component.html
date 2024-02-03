@@ -28,7 +28,7 @@
   </div>
   <div *ngIf="gifs.length > 0;else empty">
     <div class="gif-list gap-3">
-      <ng-container *ngFor="let gif of gifs">
+      <ng-container *ngFor="let gif of gifs; trackBy:identify">
         <app-gif-item
         class="h-min"
         [gif]="gif"
